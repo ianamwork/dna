@@ -24,10 +24,11 @@ st.subheader("🧠 Mind Map")
 st.markdown("[Click here to view our mind map on Miro](https://miro.com/app/board/uXjVIL8Njoo=/)")
 
 # Footer or notes (optional)
-st.write("This site is built with ❤️ using Streamlit.")
+st.write("Thank you for listening")
 
 
 import streamlit as st
+from PIL import Image
 
 # --- Sidebar Navigation ---
 st.sidebar.title("🧬 Gene Editing Project")
@@ -35,6 +36,17 @@ section = st.sidebar.radio(
     "Navigate to:",
     ["Background Information", "Current Examples", "Ethics", "Future Implications", "Team"]
 )
+
+# --- Display Logo at the Top ---
+logo = Image.open("assets/logo.png")  # Update with your logo file's path
+st.image(logo, width=300)
+st.markdown(
+    f"<div style='text-align: center;'><img src='assets/logo.png' width='300'></div>",
+    unsafe_allow_html=True
+)
+
+
+
 
 # --- Main Content Based on Selection ---
 if section == "Background Information":
@@ -86,19 +98,16 @@ elif section == "Future Implications":
     """)
 
 elif section == "Team":
-    st.title("👥 Meet the Team")
-    st.markdown("""
-    **Mitra**  
-    - Research and writing
+   st.title("👥 Meet the Team")
+   st.markdown("""
+   **Mitra** 
+   - Research and writing
 
-    **Ian**  
-    - Technical lead and design
 
-    **Gabrielle**  
-    - Curation and ethical analysis
+   **Ian** 
+   - Technical lead and design
 
-    ---
 
-    Built with ❤️ using Streamlit.
-    """)
-
+   **Gabrielle** 
+   - Curation and ethical analysis
+      """)
