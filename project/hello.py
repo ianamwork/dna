@@ -17,17 +17,18 @@ st.subheader("📄 Project Document")
 st.markdown("**Topic:** Gene editing, designer babies, and the ethics behind genetic modification")
 
 # Mission Statement
-st.markdown("**Mission Statement:** We’re looking to examine the scientific consensus on genetic editing versus public sentiment.")
+st.markdown("**Mission Statement:** We’re doing an overarching project on CRISPR, looking at current and future implications as well as ethical dilemmas.")
 
 # Exploration Plan
 st.markdown("**Exploration Plan:** We will be reviewing PubMed articles as well as New York Times articles.")
 
+st.subheader("Methodology")
+st.markdown("We mainly used Google CoLab and chatgpt to conduct a comprehensive search of CRISPR related news and developments from the last couple of years. We provided keywords that our coding used to identify helpful and relevant articles to advance our research. ")
 # Mind Map
 st.subheader("🧠 Mind Map")
 st.markdown("[Click here to view our mind map on Miro](https://miro.com/app/board/uXjVIL8Njoo=/)")
 
 # Footer or notes (optional)
-st.write("Thank you for listening")
 
 
 import streamlit as st
@@ -67,8 +68,7 @@ if section == "Background Information":
     st.write("Agriculture ⟶  Has enabled the creation of crops that produce vitamin D, use less water or fertilizer, are disease-resistant")
     
 
-    st.subheader("🧠 Mind Map")
-    st.markdown("[Click here to view our mind map](https://miro.com/app/board/uXjVIL8Njoo=/)")
+
 
 elif section == "Current Examples":
     st.title("📚 Current Examples")
@@ -80,6 +80,21 @@ elif section == "Current Examples":
     """)
     from pathlib import Path
     img_path = Path(__file__).parent / "network.png"
+    st.image(str(img_path))
+    from pathlib import Path
+    img_path = Path(__file__).parent / "gab.png"
+    st.image(str(img_path))
+    from pathlib import Path
+    img_path = Path(__file__).parent / "last.png"
+    st.image(str(img_path))
+    from pathlib import Path
+    img_path = Path(__file__).parent / "jenny.png"
+    st.image(str(img_path))
+    from pathlib import Path
+    img_path = Path(__file__).parent / "nodes.png"
+    st.image(str(img_path))
+    from pathlib import Path
+    img_path = Path(__file__).parent / "newplot.png"
     st.image(str(img_path))
 
 elif section == "Ethics":
@@ -120,3 +135,4 @@ elif section == "Team":
    **Gabrielle** 
    - Curation and ethical analysis
       """)
+
