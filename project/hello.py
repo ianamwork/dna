@@ -2,6 +2,9 @@ import streamlit as st
 
 # Title
 st.title("🧬 Gene Editing & Ethics: Project Website")
+from pathlib import Path
+img_path = Path(__file__).parent / "ss1.png"
+st.image(str(img_path))
 
 # Team Members
 st.subheader("👥 Team Members")
@@ -51,16 +54,18 @@ st.markdown(
 # --- Main Content Based on Selection ---
 if section == "Background Information":
     st.title("🔍 Background Information")
-    st.markdown("""
-    Welcome to our project on **Gene Editing & Ethics**.  
-    Our topic explores *designer babies, genetic modification,* and the science behind gene editing.  
-    We aim to understand how society perceives this compared to scientific findings.
+
+  
+    st.write("* Target the right gene using engineered guide RNA that matches the sequence to be edited")
+    st.write("* Bind the target, where the Cas9 enzyme attaches to the DNA and unwinds it")
+    st.write("* Cut the DNA precisely at the intended location")
+
+    st.title("Uses")
+    st.write(" Cancer Treatment ⟶  Used CRISPR to identify genes critical to cancer growth and to engineer immune cells that better attack tumors.") 
+    st.write("Genetic Diseases ⟶ Promising results in treating diseases like sickle cell anemia and beta thalassemia by reactivating fetal hemoglobin production")
+    st.write("Rare Disorders ⟶ CRISPR molecules have been directly injected into patients (e.g., for treating transthyretin amyloidosis) to switch off faulty genes")
+    st.write("Agriculture ⟶  Has enabled the creation of crops that produce vitamin D, use less water or fertilizer, are disease-resistant")
     
-    ---
-    **Topic:** Gene editing, designer babies, and the ethics behind genetic modification  
-    **Mission Statement:** We’re looking to examine the scientific consensus on genetic editing versus public sentiment  
-    **Exploration Plan:** We will be reviewing PubMed articles as well as New York Times articles  
-    """)
 
     st.subheader("🧠 Mind Map")
     st.markdown("[Click here to view our mind map](https://miro.com/app/board/uXjVIL8Njoo=/)")
@@ -68,33 +73,37 @@ if section == "Background Information":
 elif section == "Current Examples":
     st.title("📚 Current Examples")
     st.markdown("""
-    - **CRISPR in medicine**: Used for treating genetic disorders like sickle cell disease.
-    - **China's gene-edited babies**: In 2018, a scientist claimed to have edited embryos — causing global controversy.
+    - **Covid-19
+    - **Sickle Cell
     - **Agriculture**: Gene editing is already transforming crop production and food security.
+    - **Fight to Cure Cancer
     """)
+    from pathlib import Path
+    img_path = Path(__file__).parent / "network.png"
+    st.image(str(img_path))
 
 elif section == "Ethics":
-    st.title("⚖️ Ethics")
+    st.title("Ethics")
     st.markdown("""
     - What ethical lines exist when editing human embryos?
     - Is it acceptable to edit for non-medical traits like intelligence or appearance?
     - Who decides what’s acceptable? Scientists? Governments? Parents?
 
     Ethical debates involve issues of:
-    - **Consent**
-    - **Equity**
-    - **Access**
-    - **Unintended consequences**
+    - **Designer Babies**
+    - **Affordability**
+    - **Misuse**
     """)
 
 elif section == "Future Implications":
     st.title("🔮 Future Implications")
+    st.subheader("New Forms")
+    st.write("Base editing ⟶ Changes a single letter of DNA wihtout cutting the strand")
+    st.write("Prime editing ⟶ More precise 'search-and-replace' capabilites, compared to basic CRISPR")
     st.markdown("""
-    - Could gene editing reduce the burden of disease worldwide?
-    - Will inequality increase if only some can afford genetic enhancements?
-    - Might society shift its definition of “normal” or “desirable” traits?
-    
-    What kind of world are we editing ourselves into?
+    - Solving antibiotic resistance
+    - helping endangered species 
+    - strengthening restrictions and guidelines
     """)
 
 elif section == "Team":
